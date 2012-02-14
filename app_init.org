@@ -8,6 +8,9 @@ group :development, :test do
   gem "mocha"
 end
 
+$ rails g rspec:install   #生成#rails_app/spec/目录和#rails_app/spec/spec_helper.rb
+
+$  rake spec:rcov # 生成测试报告
 ** gitignore
 .bundle
 db/*.sqlite3
