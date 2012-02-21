@@ -1,0 +1,54 @@
+* app design
+** business
+*** salary data import
+*** data query
+*** report
+** db
+*** auth_operators 操作员
+    name
+    is_admin
+关联用户    user_id
+*** auth_departments 组织机构：可空，如需部门经理级权限控制，则需非空；
+    code
+    name
+    pid
+    q_code 以上级code开头,各级等长，默认为2
+*** auth_actions 动作
+| 编码 | code |
+| 名称 |name|
+*** auth_operations 操作  资源对应的动作
+    source
+    action
+*** auth_roles 角色，不同角色权限控制不同，可到记录、部门
+    code
+    name
+*** auth_groups 群组：角色组
+    code
+    name
+*** logs
+操作人id
+操作时间
+操作对象
+对象id
+操作id
+url
+params
+*** salaries
+编号
+状态
+备注
+创建人id
+创建时间
+修改人id
+修改时间
+*** salary_items
+
+    
+** module
+*** TODO authentication 登录验证
+*** TODO authority 权限
+*** TODO workflow
+*** TODO export
+*** TODO import
+*** TODO print
+*** TODO sheet

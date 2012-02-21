@@ -10,6 +10,7 @@ end
 
 $ rails g rspec:install   #生成#rails_app/spec/目录和#rails_app/spec/spec_helper.rb
 
+$ rails g active_scaffold Team name:string sequence:integer # 使用动态框架
 $  rake spec:rcov # 生成测试报告
 ** gitignore
 .bundle
