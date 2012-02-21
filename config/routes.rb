@@ -1,5 +1,10 @@
 AppBase::Application.routes.draw do
+
   resources :sheets do as_routes end
+
+  devise_for :users
+
+  root :to => "home#index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

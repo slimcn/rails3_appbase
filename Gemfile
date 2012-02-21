@@ -33,6 +33,8 @@ gem 'active_scaffold_vho'
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
+gem 'devise'
+
 group :test do
   # Pretty printed test output
   gem 'turn', :require => false

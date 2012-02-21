@@ -42,10 +42,13 @@ params
 修改人id
 修改时间
 *** salary_items
-
-    
 ** module
-*** TODO authentication 登录验证
+*** TODO authentication 登录验证 devise
+    https://github.com/plataformatec/devise
+    gem 'devise'
+    bundle install
+    rails g devise:install
+    rails g devise user
 *** TODO authority 权限
 *** TODO workflow
 *** TODO export
