@@ -49,6 +49,9 @@ params
     bundle install
     rails g devise:install
     rails g devise user
+    rails g devise:views
+    # 修改viewer以汉化
+
 *** TODO authority 权限
 *** TODO workflow
 *** TODO export

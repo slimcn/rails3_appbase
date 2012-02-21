@@ -55,3 +55,14 @@ zh-CN:
         subject: '重置密码信息'
       unlock_instructions:
         subject: '解锁信息'
+    viewer:
+      sign_in: '登录'
+      sign_out: '退出'
+      sign_up: '注册'
+      email: '邮箱'
+      password: '密码'
+      password_confirmation: '确认密码'
+      forgot_password?: '忘记密码？'
+      didnot_receive_confirmation_instructions?: '未收到验证信息?'
+      didnot_receive_unlock_instructions?: '未收到解除锁定信息？'
+      sign_in_with: "以#{provider.to_s.titleize}登录"
