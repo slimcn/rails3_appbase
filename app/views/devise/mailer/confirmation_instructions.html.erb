@@ -1,0 +1,5 @@
+<p><%= i18n_viewer('welcome') %> <%= @resource.email %>!</p>
+
+<p><%= i18n_viewer('confirm_account_email_through_link') %></p>
+
+<p><%= link_to i18n_viewer('激活帐号'), confirmation_url(@resource, :confirmation_token => @resource.confirmation_token) %></p>

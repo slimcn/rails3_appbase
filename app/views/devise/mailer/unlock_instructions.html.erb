@@ -1,0 +1,7 @@
+<p><%= i18n_viewer('hello') %> <%= @resource.email %>!</p>
+
+<p><%= i18n_viewer('locked_account_due_to_sign_in_attempts') %>.</p>
+
+<p><%= i18n_viewer('unlock_account_link') %>:</p>
+
+<p><%= link_to i18n_viewer('unlock_account'), unlock_url(@resource, :unlock_token => @resource.unlock_token) %></p>

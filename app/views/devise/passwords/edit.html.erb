@@ -1,0 +1,16 @@
+<h2><%= i18n_viewer('change_password') %></h2>
+
+<%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :put }) do |f| %>
+  <%= devise_error_messages! %>
+  <%= f.hidden_field :reset_password_token %>
+
+  <div><%= f.label :password, i18n_viewer('new_password') %><br />
+  <%= f.password_field :password %></div>
+
+  <div><%= f.label :password_confirmation, i18n_viewer('new_password_confirmation') %><br />
+  <%= f.password_field :password_confirmation %></div>
+
+  <div><%= f.submit i18n_viewer('change_password') %></div>
+<% end %>
+
+<%= render "links" %>

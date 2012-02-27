@@ -1,0 +1,27 @@
+<h2><%= i18n_viewer('edit') %> <%= resource_name.to_s.humanize %></h2>
+
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div><%= f.label :email, i18n_viewer('email') %><br />
+  <%= f.email_field :email %></div>
+
+  <div><%= f.label :password, i18n_viewer('new_password') %> <i>(<%= i18n_viewer('leave_blank_if_donnot_change') %>)</i><br />
+  <%= f.password_field :password, :autocomplete => "off" %></div>
+
+  <div><%= f.label :password_confirmation, i18n_viewer('new_password_confirmation') %><br />
+  <%= f.password_field :password_confirmation %></div>
+
+  <div><%= f.label :current_password, i18n_viewer('password') %> <i>(<%= i18n_viewer('need_password_to_confirm') %>)</i><br />
+  <%= f.password_field :current_password %></div>
+
+  <div><%= f.submit i18n_viewer('save') %></div>
+<% end %>
+
+<h3><%= i18n_viewer('cancel_account') %></h3>
+
+<p>i18n_viewer('unhappy')? <%= link_to i18n_viewer('cancel_account'),
+                               registration_path(resource_name),
+                               :confirm => i18n_viewer('are_you_sure?'), :method => :delete %>.</p>
+
+<%= link_to i18n_viewer('back'), :back %>
