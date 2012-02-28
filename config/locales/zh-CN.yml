@@ -1,4 +1,15 @@
 zh-CN:
+  helpers:
+    submit:
+      create: "创建%{model}"
+      update: "保存%{model}"
+  attributes:
+    name: '名称'
+    code: '编码'
+    comment: '备注'
+    status: '状态'
+    created_at: "创建时间"
+    updated_at: "修改时间"
   "reset": "重置"
   "search": "搜索"
   create_model: "创建记录"
@@ -48,22 +59,22 @@ zh-CN:
   "editing": "编辑"
   "adding": "新增"
 
-  account_activated : "{{login}} 您的账户已激活.  欢迎加入!"
+  account_activated : "%{login} 您的账户已激活.  欢迎加入!"
   account_activation_url_message : "访问以下链接以激活账户:"
   account_created : "你的账户已创建."
   activation_complete_email_subject : '您的账户已激活!'
   activation_required_email_subject : '请激活您的新账户'
   blank_activation_code : "激活码已失效.  请访问以下链接重新获得激活码."
-  bogus_activation_code : "未发现激活码对应的 {{mode}}  -- 请检查您的邮件? 或者您的账户已经激活 -- 请登录."
+  bogus_activation_code : "未发现激活码对应的 %{mode}  -- 请检查您的邮件? 或者您的账户已经激活 -- 请登录."
   create_account : "创建账户"
   email : "电子邮件"
   log_in : "登录"
   log_out : "注销"
   logged_in : "登录成功"
-  logged_in_as : "{{login}}"
+  logged_in_as : "%{login}"
   logged_out : "您已注销登录."
   login : "登录"
-  login_failed : "登录失败： {{login}}'"
+  login_failed : "登录失败： %{login}'"
   new_user_sign_up : "注册新用户"
   not_logged_in : "未登录"
   password : "密码"
@@ -99,34 +110,34 @@ zh-CN:
       half_a_minute: "半分钟"
       less_than_x_seconds:
         one: "不到一秒"
-        other: "不到 {{count}} 秒"
+        other: "不到 %{count} 秒"
       x_seconds:
         one: "一秒"
-        other: "{{count}} 秒"
+        other: "%{count} 秒"
       less_than_x_minutes:
         one: "不到一分钟"
-        other: "不到 {{count}} 分钟"
+        other: "不到 %{count} 分钟"
       x_minutes:
         one: "一分钟"
-        other: "{{count}} 分钟"
+        other: "%{count} 分钟"
       about_x_hours:
         one: "大约一小时"
-        other: "大约 {{count}} 小时"
+        other: "大约 %{count} 小时"
       x_days:
         one: "一天"
-        other: "{{count}} 天"
+        other: "%{count} 天"
       about_x_months:
         one: "大约一个月"
-        other: "大约 {{count}} 个月"
+        other: "大约 %{count} 个月"
       x_months:
         one: "一个月"
-        other: "{{count}} 个月"
+        other: "%{count} 个月"
       about_x_years:
         one: "大约一年"
-        other: "大约 {{count}} 年"
+        other: "大约 %{count} 年"
       over_x_years:
         one: "一年多"
-        other: "{{count}} 年多"
+        other: "%{count} 年多"
     prompts:
       year: "年"
       month: "月"
@@ -178,8 +189,8 @@ zh-CN:
     errors:
       template:
         header:
-          one: "有 1 个错误发生导致「{{model}}」无法被保存。"
-          other: "有 {{count}} 个错误发生导致「{{model}}」无法被保存。"
+          one: "有 1 个错误发生导致「%{model}」无法被保存。"
+          other: "有 %{count} 个错误发生导致「%{model}」无法被保存。"
         body: "如下字段出现错误："
       messages:
         inclusion: "不包含于列表中"
@@ -189,22 +200,25 @@ zh-CN:
         accepted: "必须是可被接受的"
         empty: "不能留空"
         blank: "不能为空字符"
-        too_long: "过长（最长为 {{count}} 个字符）"
-        too_short: "过短（最短为 {{count}} 个字符）"
-        wrong_length: "长度非法（必须为 {{count}} 个字符）"
+        too_long: "过长（最长为 %{count} 个字符）"
+        too_short: "过短（最短为 %{count} 个字符）"
+        wrong_length: "长度非法（必须为 %{count} 个字符）"
         taken: "已经被使用"
         not_a_number: "不是数字"
-        greater_than: "必须大于 {{count}}"
-        greater_than_or_equal_to: "必须大于或等于 {{count}}"
-        equal_to: "必须等于 {{count}}"
-        less_than: "必须小于 {{count}}"
-        less_than_or_equal_to: "必须小于或等于 {{count}}"
+        greater_than: "必须大于 %{count}"
+        greater_than_or_equal_to: "必须大于或等于 %{count}"
+        equal_to: "必须等于 %{count}"
+        less_than: "必须小于 %{count}"
+        less_than_or_equal_to: "必须小于或等于 %{count}"
         odd: "必须为单数"
         even: "必须为双数"
-      models:
-        user: '用户'
-      attributes:
-        user:
-          password: '密码'
-          Password: '密码1'
-          email: '邮箱'
+    models:
+      user: '用户'
+      sheet: '档案'
+    attributes:
+      user:
+        email: '邮箱'
+        password: '密码'
+        password_confirmation: '确认密码'
+        sign_up: 注册
+      sheet:

@@ -1,7 +1,7 @@
 <h2><%= i18n_viewer('sign_in') %></h2>
 
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-  <div><%= f.label :email, i18n_viewer('email') %><br />
+      <div><%= f.label :email %><br />
   <%= f.email_field :email %></div>
 
   <div><%= f.label :password, i18n_viewer('password') %><br />
