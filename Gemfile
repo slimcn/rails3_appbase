@@ -30,9 +30,6 @@ gem 'active_scaffold_vho'
 # Deploy with Capistrano
 # gem 'capistrano'
 
-# To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
-
 gem 'devise'
 
 group :test do
@@ -41,6 +38,9 @@ group :test do
 end
 
 group :development, :test do
+  # To use debugger
+  gem 'ruby-debug19', :require => 'ruby-debug'
+
   gem "rspec", "~> 2.7.0"
   gem "rspec-rails", "~> 2.7.0"
   gem "factory_girl_rails"
