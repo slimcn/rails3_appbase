@@ -90,3 +90,4 @@ zh-CN:
       cancel_account: '删除用户'
       unhappy: '不爽'
       are_you_sure?: '确认要如此操作？'
+      signed_in_as: '欢迎您'
