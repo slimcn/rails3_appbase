@@ -1,7 +1,8 @@
 <div id="user_nav">    
   <% if user_signed_in? %>
     <%= i18n_viewer('signed_in_as') %>, <%= current_user.email %> 
-    <%= link_to i18n_viewer('sign_out'), destroy_user_session_path %>    
+    <%= link_to i18n_viewer('sign_out'), destroy_user_session_path,
+  :method => :delete %>
   <% else %>    
     <%= link_to i18n_viewer('sign_up'), new_user_registration_path %> or    
     <%= link_to i18n_viewer('sign_in'), new_user_session_path %>    
