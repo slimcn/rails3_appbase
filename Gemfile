@@ -31,6 +31,9 @@ gem 'active_scaffold'
 
 gem 'devise'
 
+gem 'carrierwave'
+gem 'nested_form'
+
 group :test do
   # Pretty printed test output
   gem 'turn', :require => false

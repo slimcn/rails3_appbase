@@ -58,3 +58,58 @@ params
 *** TODO import
 *** TODO print
 *** TODO sheet
+*** TODO attachment   carrierwave
+**** gem 'carrierwave'
+**** rails g uploader File
+**** edit app/uploaders/file_uploader.rb
+**** rails g model attachment description:text file:string attachable:references  # 附件表，与具体model建立关联
+# db/migrate/*_attachments.rb
+     t.references :attachable, :polymorphic => true
+
+   add_index :attachments, [:attachable_type, :attachable_id]
+# models/attatchment.rb
+class Attachment < ActiveRecord::Base
+   attr_accessible :description, :file
+
+   belongs_to :attachable, :polymorphic => true
+
+   mount_uploader :file, FileUploader
+end
+# models/sheet.rb
+class Sheet < ActiveRecord::Base
+  attr_accessible :attachments_attributes # must for save attachment record data
+  
+  has_many attachments, :as => :attachable
+
+  accepts_nested_attributes_for :attachments
+end
+**** viewer
+<%= nested_form_for @article, :html=>{:multipart => true } do |f| %>
+  <%= f.error_messages %>
+  <p>
+  <%= f.label :title %><br />
+  <%= f.text_field :title %>
+  </p>
+  <p>
+  <%= f.label :description %><br />
+  <%= f.text_area :description %>
+  </p>
+  <%= f.fields_for :attachments do |attachment_form|  %>
+    <p>
+    <%= attachment_form.label :description %><br />
+    <%= attachment_form.text_area :description %>
+    </p>
+    <p>
+    <%= attachment_form.label :file %><br />
+    <%= attachment_form.file_field :file %>
+    </p>
+    <%= attachment_form.link_to_remove "Remove this attachment" %>
+  <% end %>
+  <%= f.link_to_add "Add attachment", :attachments %>
+  <p><%= f.submit %></p>
+ <% end %>     
+*** TODO multi model  nested_form
+**** gem nested_form
+**** rails g nested_form:install
+**** layouts/application.html.erb
+<%= javascript_include_tag :defaults,"nested_form" %>     

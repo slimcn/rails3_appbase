@@ -1,6 +1,7 @@
 .bundle
 db/*.sqlite3
 db/schema.rb
+db/.*
 config/database.yml
 log/*.log
 tmp/
@@ -13,7 +14,6 @@ nbproject/
 .project
 .idea
 
-# app/assets/
 test/
-spec/helpers/
-spec/views/
+
+public/uploads/

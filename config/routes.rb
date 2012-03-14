@@ -1,5 +1,6 @@
 AppBase::Application.routes.draw do
 
+  resources :attachments do as_routes end
   resources :sheets do as_routes end
 
   devise_for :users
