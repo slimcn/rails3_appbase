@@ -17,10 +17,8 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-# gem 'jquery-rails'
-gem 'jquery-rails_vho'
-gem 'render_component_vho'
-gem 'active_scaffold_vho'
+gem 'jquery-rails'
+gem 'active_scaffold'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
