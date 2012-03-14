@@ -1,4 +1,4 @@
-<div id="user_nav">    
+<div style="float:right;">
   <% if user_signed_in? %>
     <%= i18n_viewer('signed_in_as') %>, <%= current_user.email %> 
     <%= link_to i18n_viewer('sign_out'), destroy_user_session_path,
