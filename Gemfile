@@ -32,8 +32,8 @@ gem 'active_scaffold'
 gem 'devise'
 
 gem 'carrierwave'
-gem 'nested_form'
-
+#gem 'nested_form'
+gem "nested_form", :git => 'git://github.com/ryanb/nested_form.git'
 group :test do
   # Pretty printed test output
   gem 'turn', :require => false
