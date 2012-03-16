@@ -1,15 +1,25 @@
 zh-CN:
   helpers:
     submit:
-      create: "创建%{model}"
-      update: "保存%{model}"
+      create: "创建"
+      update: "保存"
   attributes:
     name: '名称'
     code: '编码'
     comment: '备注'
+    comments: '备注'
     status: '状态'
     created_at: "创建时间"
     updated_at: "修改时间"
+    created_by: "创建人"
+    updated_by: "修改人"
+    description: "描述"
+    file: '文件'
+    attachment: '附件'
+
+    efile: '文件'
+    file_type_id: '文件类型'
+    file_type: '文件类型'
   "reset": "重置"
   "search": "搜索"
   create_model: "创建记录"
@@ -215,10 +225,13 @@ zh-CN:
     models:
       user: '用户'
       sheet: '档案'
+      esheet: '文件'
     attributes:
       user:
         email: '邮箱'
         password: '密码'
         password_confirmation: '确认密码'
-        sign_up: 注册
+        sign_up: '注册'
       sheet:
+      efile:
+        file_type_id: '文件类型'        

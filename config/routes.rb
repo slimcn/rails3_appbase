@@ -1,6 +1,14 @@
 AppBase::Application.routes.draw do
 
-  resources :attachments do as_routes end
+  resources :efiles
+
+  #  resources :attachments do as_routes end
+  resources :attachments, :only => [:index] do
+    member do
+      get 'download'
+    end
+  end
+
   resources :sheets do as_routes end
 
   devise_for :users
