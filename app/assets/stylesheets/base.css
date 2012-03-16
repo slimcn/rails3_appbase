@@ -1,0 +1,12 @@
+.hidden{
+  display: none;
+  visibility: hidden;
+}
+
+.disabled{
+  disabled: disabled;
+}
+
+li.selected{
+  background-color: #4682B4
+}
