@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
@@ -46,3 +47,5 @@ module AppBase
     config.assets.version = '1.0'
   end
 end
+
+SYSTME_NAME = { :company_name => "XXX公司", :system_name => "XXX系统" }

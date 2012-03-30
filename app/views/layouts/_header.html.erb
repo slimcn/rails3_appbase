@@ -1,9 +1,14 @@
+<hgroup>
+  <h1><%= SYSTME_NAME[:company_name]%></h1>
+  <h2><%= SYSTME_NAME[:system_name]%></h2>
+</hgroup>
+
 <div style="float:right;">
   <% if user_signed_in? %>
     <%= i18n_viewer('signed_in_as') %>, <%= current_user.email %> 
     <%= link_to i18n_viewer('sign_out'), destroy_user_session_path,
   :method => :delete %>
-  <% else %>    
+  <% else %>
     <%= link_to i18n_viewer('sign_up'), new_user_registration_path %> or    
     <%= link_to i18n_viewer('sign_in'), new_user_session_path %>    
   <% end %>    
