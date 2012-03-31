@@ -1,5 +1,7 @@
 <%= render "layouts/app_begin" %>
 
-<section id="main"><%= render "layouts/article_1" %></section>
+<section id="main">
+  <%= render devise_controller? ? "layouts/article_1" : "layouts/main" %>
+</section>
 
 <%= render "layouts/app_end" %>

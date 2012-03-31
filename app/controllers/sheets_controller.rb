@@ -1,6 +1,4 @@
 class SheetsController < ApplicationController
-  layout "layout960"
-
   before_filter :authenticate_user!
 
   active_scaffold :sheet do |conf|
