@@ -3,16 +3,18 @@
 </aside>
 <article id="ajax-content">
   <section>
-    position: p1-p2-p3
+    <%= I18n.t('position')%>: <%= get_page_position %>
   </section>
-  <h1>title1</h1>
+  <h1><%= get_page_title %></h1>
   <section>
     action1 | action2
   </section>
+  <% if notice.present? || alert.present? %>
   <section>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
   </section>
+  <% end %>
   <section>
     <%= yield %>
   </section>

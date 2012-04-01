@@ -60,6 +60,7 @@ zh-CN:
   "update_%s": "修改 %s"
   "create_%s": "新建 %s"
 
+  index: '列表'
   "listing": "列表"
   "list": "列表"
   "new": "新增"
@@ -68,6 +69,8 @@ zh-CN:
   "detail": "明细"
   "editing": "编辑"
   "adding": "新增"
+
+  "position": '当前位置'
 
   account_activated : "%{login} 您的账户已激活.  欢迎加入!"
   account_activation_url_message : "访问以下链接以激活账户:"
@@ -226,6 +229,7 @@ zh-CN:
       user: '用户'
       sheet: '档案'
       esheet: '文件'
+      main: '主界面'
     attributes:
       user:
         email: '邮箱'
