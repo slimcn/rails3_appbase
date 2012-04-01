@@ -4,4 +4,23 @@
   <!-- JS loading -->
   <%= javascript_include_tag "application" %>
   <%= javascript_include_tag "nested_form" %>
+  <!-- jstree config -->
+  <script type="text/javascript">
+    function open_link(event){
+      tmp_url = this.href;
+      $.ajax({type: "GET", url: tmp_url, data: "id=",
+              success: function(data){$("#ajax-content").html(data);}});
+    };
+    
+    $(function() {
+    $("#menu_aside").jstree({
+      "json_data" : {
+        "data" : <%=raw menu_data %>},
+      "plugins" : [ "themes", "json_data", "ui" ]
+    }).bind("select_node.jstree", function (e, data){
+      alert(data.rslt.obj.data("id"));
+    }).delegate('a', 'click', open_link);
+    $("#menu_aside").jstree("set_theme", "apple");
+    });
+  </script>
 </html>

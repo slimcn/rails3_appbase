@@ -9,3 +9,5 @@
 //= require jquery_ujs
 //= require active_scaffold
 //= require_tree.
+
+//= require jstree/jquery.jstree
