@@ -1,0 +1,24 @@
+
+<table>
+  <tr>
+    <th>F1</th>
+    <th>F2</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @sheet0s.each do |sheet0| %>
+  <tr>
+    <td><%= sheet0.f1 %></td>
+    <td><%= sheet0.f2 %></td>
+    <td><%= link_to 'Show', sheet0 %></td>
+    <td><%= link_to 'Edit', edit_sheet0_path(sheet0) %></td>
+    <td><%= link_to 'Destroy', sheet0, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Sheet0', new_sheet0_path %>

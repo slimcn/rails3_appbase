@@ -1,5 +1,7 @@
 AppBase::Application.routes.draw do
 
+  resources :sheet0s
+
   resources :efiles
 
   #  resources :attachments do as_routes end

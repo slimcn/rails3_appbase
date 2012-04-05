@@ -1,0 +1,25 @@
+<%= form_for(@sheet0) do |f| %>
+  <% if @sheet0.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sheet0.errors.count, "error") %> prohibited this sheet0 from being saved:</h2>
+
+      <ul>
+      <% @sheet0.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :f1 %><br />
+    <%= f.text_field :f1 %>
+  </div>
+  <div class="field">
+    <%= f.label :f2 %><br />
+    <%= f.number_field :f2 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

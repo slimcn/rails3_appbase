@@ -228,6 +228,7 @@ zh-CN:
     models:
       user: '用户'
       sheet: '档案'
+      sheet0: '标准框架'
       esheet: '文件'
       main: '主界面'
     attributes:
@@ -237,5 +238,8 @@ zh-CN:
         password_confirmation: '确认密码'
         sign_up: '注册'
       sheet:
+      sheet0:
+        f1: '字段1'
+        f2: '字段2'
       efile:
         file_type_id: '文件类型'        
