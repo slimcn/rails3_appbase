@@ -1,9 +1,19 @@
 class Sheet0sController < ApplicationController
+  def tag
+    @sheet0s = Sheet0.tagged_with("#{params[:id]}")
+    tag_cloud
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @sheet0s }
+    end
+
+  end
+
   # GET /sheet0s
   # GET /sheet0s.json
   def index
     @sheet0s = Sheet0.all
-
+    tag_cloud
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @sheet0s }
@@ -79,5 +89,10 @@ class Sheet0sController < ApplicationController
       format.html { redirect_to sheet0s_url }
       format.json { head :ok }
     end
+  end
+
+  private
+  def tag_cloud
+    @tags = Sheet0.tag_counts_on(:tags)
   end
 end

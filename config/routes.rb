@@ -1,6 +1,10 @@
 AppBase::Application.routes.draw do
 
-  resources :sheet0s
+  resources :sheet0s do
+    collection do
+      get 'tag'
+    end
+  end
 
   resources :efiles
 

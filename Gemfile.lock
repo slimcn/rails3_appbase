@@ -37,6 +37,8 @@ GEM
       activesupport (= 3.1.1)
     activesupport (3.1.1)
       multi_json (~> 1.0)
+    acts-as-taggable-on (2.2.2)
+      rails (~> 3.0)
     ansi (1.4.2)
     archive-tar-minitar (0.5.2)
     arel (2.2.1)
@@ -169,6 +171,7 @@ PLATFORMS
 
 DEPENDENCIES
   active_scaffold
+  acts-as-taggable-on (~> 2.2.2)
   carrierwave
   coffee-rails (~> 3.1.1)
   devise
