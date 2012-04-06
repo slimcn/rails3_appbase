@@ -21,6 +21,9 @@
       alert(data.rslt.obj.data("id"));
     }).delegate('a', 'click', open_link);
     $("#menu_aside").jstree("set_theme", "apple");
+
+    // hidden scaffold h1: use layout to set h1
+    $($('#main-content h1')[0]).addClass('hidden')
     });
   </script>
 </html>
