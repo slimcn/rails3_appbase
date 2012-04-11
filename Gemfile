@@ -35,6 +35,8 @@ gem 'carrierwave'
 #gem 'nested_form'
 gem "nested_form", :git => 'git://github.com/ryanb/nested_form.git'
 gem 'acts-as-taggable-on', '~> 2.2.2'
+gem 'sunspot_rails'
+gem 'sunspot_solr'
 
 group :test do
   # Pretty printed test output

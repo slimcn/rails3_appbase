@@ -19,7 +19,12 @@ AppBase::Application.routes.draw do
 
   devise_for :users
 
-  resources :main, :only => [:index]
+  resources :main, :only => [:index] do
+    collection do
+      get 'search'
+    end
+  end
+
   root :to => "main#index"
 
   # The priority is based upon order of creation:

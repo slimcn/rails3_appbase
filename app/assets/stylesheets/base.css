@@ -179,3 +179,7 @@ p	color:#fff;
 }
 
 
+/* common layout element style */
+#main-search {
+  float: right;
+}

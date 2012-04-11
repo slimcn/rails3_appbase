@@ -5,16 +5,29 @@
   <section>
     <%= I18n.t('position')%>: <%= get_page_position %>
   </section>
+
   <h1><%= get_page_title %></h1>
+
+  
   <section>
     action1 | action2
   </section>
+
+  <div id="main-search">
+    <%= form_tag "/main/search", :method => 'get' do %>
+    <%= text_field_tag "search[key]", (params[:search].is_a?(Hash) ?
+        params[:search][:key] : ''), :placeholder => '关键字' %>
+    <%= submit_tag t("search") %>
+    <% end %>
+  </div>
+
   <% if notice.present? || alert.present? %>
   <section>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
   </section>
   <% end %>
+
   <section id="main-content">
     <%= yield %>
   </section>

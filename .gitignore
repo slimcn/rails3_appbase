@@ -15,5 +15,9 @@ nbproject/
 .idea
 
 test/
+log/*.lck
+config/sunspot.yml
+solr/
+sunspot-solr.pid
 
 public/uploads/
